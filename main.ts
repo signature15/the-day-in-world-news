@@ -1,8 +1,11 @@
 // This program copies the pre-rendered entry.png image to the output directory.
 // It serves as the entrypoint for the make.fun image contest submission.
-// The image is a front-page style news poster showing the world's headlines
-// from Wednesday 18 November 2026, featuring a masthead, six-continent map band,
-// and regional headline cards across three columns.
+// The image is a v14 broadsheet-style news poster covering the world's news of
+// Wednesday 18 November 2026. Its layout, top to bottom: a newspaper masthead
+// with the date; horizontal time bands that group the day's stories by when
+// they broke (morning, midday, afternoon); stat cards summarizing key figures
+// from the day's events; and evening briefs closing out the day in a digest
+// band.
 //
 // Determinism: The program reads a fixed file (entry.png) and writes identical
 // bytes to the output location on every run, producing byte-for-byte identical
