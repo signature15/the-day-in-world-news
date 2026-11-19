@@ -1,27 +1,27 @@
-// news-image entry — r12-the-day-in-world-news
-// A v14 broadsheet front page for Wednesday, 18 November 2026, built for the
-// make.fun news-image contest. The composition reads like a classic printed
-// world-news paper and is laid out top to bottom as follows:
+// One Day in World News — Wednesday 18 November 2026
+// A broadsheet-format news poster capturing the global narrative for a single day,
+// rendered as a classic front page. This entry synthesizes international reporting
+// into a structured visual layout that balances hierarchy, information density, and
+// visual rhythm across six continental regions.
 //
-// 1. Masthead — the paper's title, the full date line "Wednesday 18 November
-//    2026", edition markers, and the rule that anchors the whole page.
-// 2. Day-in-numbers strip — a horizontal band of headline statistics pulled
-//    from the day's events: counts, percentages, and figures that tell the
-//    story at a glance before any prose is read.
-// 3. Lead stories — the dominant coverage of the day set across wide columns
-//    with large headlines, subheads, and bylines, hierarchically above the
-//    secondary news.
-// 4. Region grid — a geographic matrix of shorter items organized by world
-//    region, so readers can scan continent by continent for local reporting.
-// 5. Evening briefs — a condensed closing digest of developing stories and
-//    overnight updates, the traditional end-of-paper roundup.
-// 6. Sources footer — attribution row crediting the wire services and outlets
-//    behind every story and figure on the page.
+// The poster is organized in six distinct sections from top to bottom:
+// - Masthead: The publication title, full date (Wednesday 18 November 2026), and
+//   decorative rule establishing the newspaper aesthetic.
+// - Day-in-numbers: A statistics band featuring key figures, percentages, and metrics
+//   that summarize the day's major developments at a glance.
+// - Lead stories: Prominent coverage area with large display headlines, subheadings,
+//   and bylines for the most significant news events of the day.
+// - Region color grid: A geographic breakdown of stories arranged by continent,
+//   using distinct color coding to help readers navigate coverage by location.
+// - Evening briefs: A condensed section of shorter bulletins, updates, and
+//   developing stories that round out the day's reporting.
+// - Sources footer: Attribution line listing wire services and news outlets that
+//   contributed reporting and data to the broadsheet.
 //
-// Mechanics: the program performs a deterministic copy of the pre-rendered
-// entry.png into the grading output directory (override with MAKEFUN_OUTPUT_DIR).
-// The output is byte-identical on every run, with no network access and no
-// dependence on timing or execution order.
+// Implementation: The program performs a byte-for-byte copy of a pre-rendered
+// entry.png file to the output directory. This guarantees deterministic output—
+// every execution produces identical bytes without network calls, timing dependencies,
+// or state variations.
 
 import { copyFileSync } from 'node:fs';
 import { join } from 'node:path';
