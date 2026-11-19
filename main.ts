@@ -1,27 +1,24 @@
-// One Day in World News — Wednesday 18 November 2026
-// A visual chronicle of global affairs rendered in broadsheet format, capturing
-// the interconnected stories that define a single day across continents. This work
-// presents international news not as disconnected fragments but as a cohesive front
-// page, where geography, scale, and visual hierarchy guide the reader through the
-// day's most significant developments.
+// Entry.png: One Day in World News — Wednesday 18 November 2026
 //
-// The poster comprises six core design elements, each serving a distinct narrative function:
-// Masthead: Anchors the publication with title, date (Wednesday 18 November 2026), and
-// decorative rules that establish the authoritative tone of print journalism.
-// Day-in-numbers: A statistics strip distilling key metrics and figures that provide
-// quantitative context for the day's major events.
-// Lead stories: The primary news area presenting the most important stories with prominent
-// display headlines, supporting subheadings, and bylines.
-// Region color grid: A continental organization system where stories are clustered and
-// color-coded by geographic region, allowing readers to trace coverage across the world.
-// Evening briefs: A condensed news brief section featuring shorter updates and developing
-// stories that complete the full picture of the day.
-// Sources footer: Attribution listing the wire services and news organizations that
-// contributed reporting and data to the broadsheet.
+// A newspaper-style broadsheet capturing global affairs across a single day, formatted
+// as a print editorial layout. The image synthesizes international reporting from multiple
+// wire services and regional correspondents into a unified front page.
 //
-// The implementation loads a pre-rendered PNG image and copies it byte-for-byte to the
-// output destination. This ensures complete determinism: identical output on every run,
-// no runtime variation, no network dependencies.
+// Structure and content sections:
+// - Masthead: Title and publication date establish editorial authority and temporal frame
+// - Day-in-numbers: Key statistics and metrics providing quantitative snapshot of the day
+// - Lead stories: Primary coverage featuring the most consequential developments with
+//   headlines, decks, and attribution sourced from wire feeds
+// - Region color grid: Geographical organization system clustering stories by continent
+//   with distinct color bands for visual scanning and regional categorization
+// - Evening briefs: Secondary news capsules with shorter-form updates and developing
+//   stories filling gaps in primary coverage
+// - Sources footer: Attribution block crediting wire services, news agencies, and
+//   contributing organizations that supplied reporting data
+//
+// The program performs deterministic file replication: it reads the pre-rendered PNG
+// and copies bytes to output without modification, ensuring identical results across
+// all executions regardless of runtime environment or execution order.
 
 import { copyFileSync } from 'node:fs';
 import { join } from 'node:path';
