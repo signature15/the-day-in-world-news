@@ -1,3 +1,4 @@
+import { join } from 'node:path';
 // Entry.png: One Day in World News — Wednesday 18 November 2026
 //
 // A newspaper-style broadsheet capturing global affairs across a single day, formatted
@@ -20,13 +21,13 @@
 // and copies bytes to output without modification, ensuring identical results across
 // all executions regardless of runtime environment or execution order.
 
-import { copyFileSync } from 'node:fs';
-import { join } from 'node:path';
-
+import { copyFileSync, mkdirSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 const sourceUrl = new URL('./entry.png', import.meta.url);
 const sourcePath = sourceUrl.pathname;
 
 const outputDir = process.env.MAKEFUN_OUTPUT_DIR || '/output';
 const outputPath = join(outputDir, 'entry.png');
+mkdirSync(outputDir, { recursive: true });
 
-copyFileSync(sourcePath, outputPath);
+copyFileSync(fileURLToPath(sourceUrl), outputPath);
